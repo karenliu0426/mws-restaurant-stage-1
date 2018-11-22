@@ -99,7 +99,7 @@ nav h1 a {
 }
 /* ====================== Map ====================== */
 #map {
-  height: 400px;
+  height: 200px;
   width: 100%;
   background-color: #ccc;
 }
@@ -130,12 +130,35 @@ nav h1 a {
 }
 
 /* ====================== Restaurant Listing ====================== */
-#restaurants-list {
-  background-color: #f3f3f3;
-  list-style: outside none none;
-  margin: 0;
-  padding: 30px 15px 60px;
-  text-align: center;
+#restaurant-grid {
+	//display: grid;
+}
+@media only screen and (max-width: 600px) {
+
+	#restaurants-list {
+	  background-color: #f3f3f3;
+		display: grid;
+		grid-template-columns: auto;
+	  list-style: outside none none;
+	  margin: 0;
+	  padding: 30px 15px 60px;
+	  text-align: center;
+	}
+
+}
+
+@media only screen and (min-width: 600px) {
+
+	#restaurants-list {
+	  background-color: #f3f3f3;
+		display: grid;
+		grid-template-columns: auto auto auto;
+	  list-style: outside none none;
+	  margin: 0;
+	  padding: 30px 15px 60px;
+	  text-align: center;
+	}
+
 }
 #restaurants-list li {
   background-color: #fff;
@@ -145,15 +168,14 @@ nav h1 a {
   min-height: 380px;
   padding: 0 30px 25px;
   text-align: left;
-  width: 270px;
+  width: auto;
 }
 #restaurants-list .restaurant-img {
   background-color: #ccc;
   display: block;
   margin: 0;
-  max-width: 100%;
-  min-height: 248px;
-  min-width: 100%;
+  width: 100%;
+  height: auto;
 }
 #restaurants-list li h1 {
   color: #f18200;
